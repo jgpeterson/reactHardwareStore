@@ -21,6 +21,7 @@ class AdminView extends Component {
       ]
     }
   }
+
   render () {
     return (
       <div>
@@ -29,15 +30,15 @@ class AdminView extends Component {
         <div>
           { this.state.productList.map((product, index) => {
             return (
-              <Product key={index} productName={product.productName} price={product.price} description={product.description} />
+              <Product key={index} productName={product.productName} price={product.price} description={product.description}/>
             )
           }) }
         </div>
         <h2>Create A New Product</h2>
-           <AdminForm />
-    </div>
+        <AdminForm />
+      </div>
     )
   }
 }
 
-export default AdminView;
+export default AdminView
