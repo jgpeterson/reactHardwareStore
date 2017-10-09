@@ -7,6 +7,7 @@ const Product = ({ productName, price, description }) => {
       <h4>${price}</h4>
       <p>{description}</p>
       <button>Delete</button>
+      <button>Add to Cart</button>
     </div>
   )
 }
