@@ -8,6 +8,7 @@ const Product = ({ productName, price, description }) => {
       <p>{description}</p>
       <button>Delete</button>
       <button>Add to Cart</button>
+      <button>Delete Item from Cart</button>
     </div>
   )
 }
