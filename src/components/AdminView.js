@@ -22,6 +22,17 @@ class AdminView extends Component {
     }
   }
 
+  addProductToProductList = (newProduct) => {
+    const newProductList = [...this.state.productList]
+    newProductList.splice
+    this.setState({productList: newProductList})
+  }
+
+  deleteProductFromProductList = (id) => {
+      const newProductList = [...this.state.productList]
+      this.setState({productList: newProductList})
+  }
+
   render () {
     return (
       <div>
@@ -35,7 +46,7 @@ class AdminView extends Component {
           }) }
         </div>
         <h2>Create A New Product</h2>
-        <AdminForm />
+        <AdminForm addProductToProductList={this.addProductToProductList} />
       </div>
     )
   }

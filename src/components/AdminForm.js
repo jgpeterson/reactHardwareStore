@@ -28,9 +28,23 @@ class AdminForm extends Component {
     this.setState({newForm: newForm})
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.addProductToProductList(this.state.newForm)
+
+    const emptyForm = {
+      productName: '',
+      price: '',
+      description: ''
+    }
+    this.setState({newForm: emptyForm})
+  }
+ 
+  
+
   render () {
     return (
-      <form >
+      <form onSubmit={this.handleSubmit}>
         <div>
           {/* value is equal to what we want to change in state */}
           {/* name is equal to the key we want to edit in the object  */}
